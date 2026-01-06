@@ -26,10 +26,16 @@ export default function Footer() {
       rel="noopener noreferrer" className="p-3 rounded-full bg-slate-900 border border-white/10 hover:border-blue-500 text-slate-400 hover:text-white transition-all group">
                   <Instagram size={20} className="group-hover:text-blue-500 transition-colors" />
                 </a>
+
+                { /*
+                              *** Linkedin ***    
                 <a href="#" className="p-3 rounded-full bg-slate-900 border border-white/10 hover:border-blue-500 text-slate-400 hover:text-white transition-all group">
                   <Linkedin size={20} className="group-hover:text-blue-500 transition-colors" />
-                </a>
-                <a href="mailto:contato@dlgroup.com" className="p-3 rounded-full bg-slate-900 border border-white/10 hover:border-blue-500 text-slate-400 hover:text-white transition-all group">
+                </a>*/ }
+                
+                {/* Deve-se entrar o link do whatsapp aqui*/}
+
+                <a href="mailto:dlgroup.business@gmail.com?subject=Contato&body=Olá, gostaria de agendar uma reunião" className="p-3 rounded-full bg-slate-900 border border-white/10 hover:border-blue-500 text-slate-400 hover:text-white transition-all group">
                   <Mail size={20} className="group-hover:text-blue-500 transition-colors" />
                 </a>
              </div>
