@@ -1,5 +1,6 @@
 import { Mail, Instagram, Linkedin, ArrowUpRight } from "lucide-react";
-import dlGroupLogo from "../assets/dl-group-logo-removebg-preview.png";
+// MUDANÇA: Alterado de dlGroupLogo para dlMonogram
+import dlMonogram from "../assets/dl-monogram-removebg-preview.png";
 
 export default function Footer() {
   return (
@@ -17,9 +18,12 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col items-center gap-6">
-             <img src={dlGroupLogo} alt="DL Group" className="h-12 opacity-80" />
+             {/* MUDANÇA: Agora utiliza o dlMonogram e aumentamos levemente a altura para compensar o formato */}
+             <img src={dlMonogram} alt="DL Monogram" className="h-16 opacity-60 hover:opacity-100 transition-opacity duration-500" />
+             
              <div className="flex gap-4">
-                <a href="#" className="p-3 rounded-full bg-slate-900 border border-white/10 hover:border-blue-500 text-slate-400 hover:text-white transition-all group">
+                <a href="https://www.instagram.com/dlgroup__?igsh=YmI1Nm5zeDA4eXI2&utm_source=qr"    target="_blank"              // Abre em uma nova aba/janela
+      rel="noopener noreferrer" className="p-3 rounded-full bg-slate-900 border border-white/10 hover:border-blue-500 text-slate-400 hover:text-white transition-all group">
                   <Instagram size={20} className="group-hover:text-blue-500 transition-colors" />
                 </a>
                 <a href="#" className="p-3 rounded-full bg-slate-900 border border-white/10 hover:border-blue-500 text-slate-400 hover:text-white transition-all group">
@@ -40,4 +44,3 @@ export default function Footer() {
     </footer>
   );
 }
-

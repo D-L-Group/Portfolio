@@ -1,15 +1,13 @@
 import { motion } from "framer-motion";
-
 import dlMonogram from "../assets/dl-monogram-removebg-preview.png";
 
 export default function Hero() {
   return (
-    <section id="home" className="h-screen bg-slate-950 flex flex-col items-center justify-center overflow-hidden relative">
-      
-      
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
+    <section id="home" className="relative w-full h-auto md:h-screen bg-slate-950 flex flex-col items-center justify-center overflow-visible pt-48 pb-32 md:pt-0 md:pb-0">
+      {/* LUZ DE FUNDO: Fixada no topo para irradiar degradê para a seção de baixo */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] md:w-[900px] h-[600px] md:h-[900px] bg-blue-600/15 rounded-full blur-[100px] md:blur-[160px] pointer-events-none z-0" />
 
-      <div className="relative z-10 flex flex-col items-center text-center px-4">
+      <div className="relative z-10 flex flex-col items-center text-center px-6">
         <motion.img 
             src={dlMonogram}
             alt="DL Monogram"
@@ -18,7 +16,7 @@ export default function Hero() {
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             className="w-48 md:w-64 mb-8 drop-shadow-[0_0_35px_rgba(59,130,246,0.3)]" 
         />
-
+        
         <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

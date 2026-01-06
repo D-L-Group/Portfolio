@@ -1,0 +1,713 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+.gitignore
+eslint.config.js
+index.html
+package.json
+public/vite.svg
+README.md
+src/App.jsx
+src/assets/dl-group-logo-removebg-preview.png
+src/assets/dl-group-logo.png
+src/assets/dl-monogram-removebg-preview.png
+src/assets/dl-monogram.png
+src/components/Footer.jsx
+src/components/Navbar.jsx
+src/index.css
+src/main.jsx
+src/sections/Hero.jsx
+src/sections/Results.jsx
+src/sections/Services.jsx
+src/sections/Testimonials.jsx
+src/util.js
+vite.config.js
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path=".gitignore">
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+</file>
+
+<file path="eslint.config.js">
+import js from '@eslint/js'
+import globals from 'globals'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
+import { defineConfig, globalIgnores } from 'eslint/config'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{js,jsx}'],
+    extends: [
+      js.configs.recommended,
+      reactHooks.configs.flat.recommended,
+      reactRefresh.configs.vite,
+    ],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        ecmaFeatures: { jsx: true },
+        sourceType: 'module',
+      },
+    },
+    rules: {
+      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+    },
+  },
+])
+</file>
+
+<file path="index.html">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="src/assets/dl-monogram.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>DL Group</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+</file>
+
+<file path="package.json">
+{
+  "name": "dl-group",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "framer-motion": "^12.24.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "vite": "^7.2.4"
+  }
+}
+</file>
+
+<file path="public/vite.svg">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="31.88" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 257"><defs><linearGradient id="IconifyId1813088fe1fbc01fb466" x1="-.828%" x2="57.636%" y1="7.652%" y2="78.411%"><stop offset="0%" stop-color="#41D1FF"></stop><stop offset="100%" stop-color="#BD34FE"></stop></linearGradient><linearGradient id="IconifyId1813088fe1fbc01fb467" x1="43.376%" x2="50.316%" y1="2.242%" y2="89.03%"><stop offset="0%" stop-color="#FFEA83"></stop><stop offset="8.333%" stop-color="#FFDD35"></stop><stop offset="100%" stop-color="#FFA800"></stop></linearGradient></defs><path fill="url(#IconifyId1813088fe1fbc01fb466)" d="M255.153 37.938L134.897 252.976c-2.483 4.44-8.862 4.466-11.382.048L.875 37.958c-2.746-4.814 1.371-10.646 6.827-9.67l120.385 21.517a6.537 6.537 0 0 0 2.322-.004l117.867-21.483c5.438-.991 9.574 4.796 6.877 9.62Z"></path><path fill="url(#IconifyId1813088fe1fbc01fb467)" d="M185.432.063L96.44 17.501a3.268 3.268 0 0 0-2.634 3.014l-5.474 92.456a3.268 3.268 0 0 0 3.997 3.378l24.777-5.718c2.318-.535 4.413 1.507 3.936 3.838l-7.361 36.047c-.495 2.426 1.782 4.5 4.151 3.78l15.304-4.649c2.372-.72 4.652 1.36 4.15 3.788l-11.698 56.621c-.732 3.542 3.979 5.473 5.943 2.437l1.313-2.028l72.516-144.72c1.215-2.423-.88-5.186-3.54-4.672l-25.505 4.922c-2.396.462-4.435-1.77-3.759-4.114l16.646-57.705c.677-2.35-1.37-4.583-3.769-4.113Z"></path></svg>
+</file>
+
+<file path="README.md">
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+</file>
+
+<file path="src/App.jsx">
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Hero from "./sections/Hero";
+import Services from "./sections/Services";
+import Results from "./sections/Results";
+import Testimonials from "./sections/Testimonials";
+
+function App() {
+  return (
+    <main className="bg-slate-950 min-h-screen text-white selection:bg-blue-500/30">
+      <Navbar />
+      
+      <div className="flex flex-col gap-0">
+        <Hero />
+        <Services />
+        <Results />
+        <Testimonials />
+      </div>
+      
+      <Footer />
+    </main>
+  );
+}
+
+export default App;
+</file>
+
+<file path="src/components/Footer.jsx">
+import { Mail, Instagram, Linkedin, ArrowUpRight } from "lucide-react";
+import dlGroupLogo from "../assets/dl-group-logo-removebg-preview.png";
+
+export default function Footer() {
+  return (
+    <footer id="contato" className="pt-24 pb-12 px-6 border-t border-white/5 bg-slate-950">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col items-center text-center gap-12 mb-20">
+          
+          <div>
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">
+              Bora criar algo <br /> <span className="text-blue-500">lendário?</span>
+            </h2>
+            <button className="group flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-full font-bold transition-all mx-auto">
+              Iniciar Projeto <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            </button>
+          </div>
+
+          <div className="flex flex-col items-center gap-6">
+             <img src={dlGroupLogo} alt="DL Group" className="h-12 opacity-80" />
+             <div className="flex gap-4">
+                <a href="#" className="p-3 rounded-full bg-slate-900 border border-white/10 hover:border-blue-500 text-slate-400 hover:text-white transition-all group">
+                  <Instagram size={20} className="group-hover:text-blue-500 transition-colors" />
+                </a>
+                <a href="#" className="p-3 rounded-full bg-slate-900 border border-white/10 hover:border-blue-500 text-slate-400 hover:text-white transition-all group">
+                  <Linkedin size={20} className="group-hover:text-blue-500 transition-colors" />
+                </a>
+                <a href="mailto:contato@dlgroup.com" className="p-3 rounded-full bg-slate-900 border border-white/10 hover:border-blue-500 text-slate-400 hover:text-white transition-all group">
+                  <Mail size={20} className="group-hover:text-blue-500 transition-colors" />
+                </a>
+             </div>
+          </div>
+        </div>
+
+        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
+          <p>© 2026 DL GROUP. Todos os direitos reservados.</p>
+          <p>Desenvolvido com foco em performance e automação.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
+</file>
+
+<file path="src/components/Navbar.jsx">
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import dlGroupLogo from "../assets/dl-group-logo-removebg-preview.png";
+
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [hoveredPath, setHoveredPath] = useState(null); // Estado para a animação da linha
+
+  const navLinks = [
+    { name: "Início", id: "home" },
+    { name: "Serviços", id: "servicos" },
+    { name: "Produtos", id: "produtos" },
+  ];
+
+  const scrollToSection = (e, id) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 80,
+        behavior: "smooth",
+      });
+      setIsOpen(false);
+    }
+  };
+
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-[100] p-4 md:p-6 flex justify-center">
+      <div className="flex items-center justify-between w-full max-w-7xl px-6 py-4 bg-slate-900/60 backdrop-blur-xl border border-white/10 rounded-2xl">
+        
+        <img 
+          src={dlGroupLogo} 
+          alt="DL Group" 
+          className="h-8 md:h-10 w-auto cursor-pointer"
+          onClick={(e) => scrollToSection(e, "home")}
+        />
+
+        {/* Links Desktop com Animação de Linha */}
+        <div className="hidden md:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <a
+              key={link.id}
+              href={`#${link.id}`}
+              onClick={(e) => scrollToSection(e, link.id)}
+              onMouseEnter={() => setHoveredPath(link.id)}
+              onMouseLeave={() => setHoveredPath(null)}
+              className="relative text-sm font-medium text-slate-300 hover:text-white transition-colors px-1 py-2"
+            >
+              {link.name}
+              
+              {/* A LINHA ANIMADA */}
+              {hoveredPath === link.id && (
+                <motion.div
+                  layoutId="navbar-underline"
+                  className="absolute bottom-0 left-0 right-0 h-[2px] bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.6)]"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                />
+              )}
+            </a>
+          ))}
+          
+          <button className="ml-4 px-5 py-2 bg-blue-600 rounded-full text-white font-bold text-xs hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/20 active:scale-95">
+            Contato
+          </button>
+        </div>
+
+        {/* Botão Hambúrguer (Mobile) */}
+        <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
+
+      {/* Menu Mobile (Mesma lógica pode ser aplicada aqui) */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            className="absolute top-24 left-4 right-4 bg-slate-900/95 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 flex flex-col gap-6 md:hidden z-[101] shadow-2xl"
+          >
+            {navLinks.map((link) => (
+              <a 
+                key={link.id}
+                href={`#${link.id}`} 
+                onClick={(e) => scrollToSection(e, link.id)} 
+                className="text-xl text-slate-300 font-semibold border-b border-white/5 pb-2"
+              >
+                {link.name}
+              </a>
+            ))}
+            <button className="w-full py-4 bg-blue-600 rounded-2xl text-white font-bold text-lg shadow-xl shadow-blue-500/20">
+              Iniciar Projeto
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
+  );
+}
+</file>
+
+<file path="src/index.css">
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  }
+}
+
+@theme {
+  /* Cores extraídas da sua identidade visual */
+  --color-dl-carbon: #0A0A0A;
+  --color-dl-platinum: #E6E6E6;
+  --color-dl-indigo: #1C1C5E;
+  --color-dl-sapphire: #0033A0;
+
+  /* Fontes e animações personalizadas podem vir aqui */
+  --font-sans: "Inter", ui-sans-serif, system-ui;
+}
+
+/* Efeito de grão (opcional para aspecto sênior/texturizado) */
+.bg-noise {
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  filter: contrast(150%) brightness(100%);
+}
+</file>
+
+<file path="src/main.jsx">
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
+</file>
+
+<file path="src/sections/Hero.jsx">
+import { motion } from "framer-motion";
+
+import dlMonogram from "../assets/dl-monogram-removebg-preview.png";
+
+export default function Hero() {
+  return (
+    <section id="home" className="h-screen bg-slate-950 flex flex-col items-center justify-center overflow-hidden relative">
+      
+      
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="relative z-10 flex flex-col items-center text-center px-4">
+        <motion.img 
+            src={dlMonogram}
+            alt="DL Monogram"
+            initial={{ opacity: 0, scale: 0.8, filter: "blur(20px)" }}
+            animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            className="w-48 md:w-64 mb-8 drop-shadow-[0_0_35px_rgba(59,130,246,0.3)]" 
+        />
+
+        <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-white text-3xl md:text-5xl font-bold tracking-tight mb-4"
+        >
+            Inovação que <span className="text-blue-500 text-glow">Escala</span>
+        </motion.h2>
+
+        <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-slate-400 text-lg max-w-xl leading-relaxed"
+        >
+            Transformando operações complexas em fluxos modernos com Inteligência Artificial e tecnologia de ponta.
+        </motion.p>
+      </div>
+    </section>
+  );
+}
+</file>
+
+<file path="src/sections/Results.jsx">
+import { motion, useInView } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
+
+const Counter = ({ value, title }) => {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      let start = 0;
+      const end = parseInt(value);
+      const duration = 2; // Duração da animação em segundos
+      let timer = setInterval(() => {
+        start += Math.ceil(end / 60);
+        if (start >= end) {
+          setCount(end);
+          clearInterval(timer);
+        } else {
+          setCount(start);
+        }
+      }, 1000 / 60);
+    }
+  }, [isInView, value]);
+
+  return (
+    <div ref={ref} className="text-center">
+      <div className="text-5xl md:text-6xl font-bold text-white mb-2">
+        {count}+
+      </div>
+      <div className="text-blue-400 font-medium uppercase tracking-widest text-sm">
+        {title}
+      </div>
+    </div>
+  );
+};
+
+export default function Results() {
+  return (
+    <section 
+      id="produtos" 
+      className="py-24 bg-slate-950/50 relative overflow-hidden scroll-mt-24"
+    >
+      {/* Luz de fundo estratégica para profundidade */}
+      <div className="absolute top-1/2 right-0 w-[300px] h-[300px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-6">
+        
+        {/* Grid de Contadores Animados */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-32">
+          <Counter value="50" title="Projetos n8n" />
+          <Counter value="30" title="Sistemas Web" />
+          <Counter value="15" title="SaaS Ativos" />
+          <Counter value="100" title="Horas de Automação" />
+        </div>
+
+        {/* Showcase de Produtos/Projetos */}
+        <div className="space-y-12">
+          <h2 className="text-3xl font-bold text-white">
+            Produtos <span className="text-blue-500">Destaque</span>
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            {/* Produto 1: Exemplo SaaS */}
+            <motion.div 
+              whileHover={{ scale: 1.02 }}
+              className="group relative h-[400px] rounded-3xl overflow-hidden border border-white/10"
+            >
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10" />
+              <img 
+                src="https://images.unsplash.com/photo-1551288049-bbda38a594a0?auto=format&fit=crop&q=80&w=800" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                alt="Dashboard SaaS"
+              />
+              <div className="absolute bottom-0 left-0 p-8 z-20">
+                <span className="bg-blue-600 text-[10px] px-3 py-1 rounded-full uppercase font-bold text-white mb-4 inline-block">SaaS</span>
+                <h3 className="text-2xl font-bold text-white mb-2">DL Automate Pro</h3>
+                <p className="text-slate-300 text-sm">Gestão completa de leads e automação de CRM integrada ao n8n.</p>
+              </div>
+            </motion.div>
+
+            {/* Produto 2: Exemplo Automação */}
+            <motion.div 
+              whileHover={{ scale: 1.02 }}
+              className="group relative h-[400px] rounded-3xl overflow-hidden border border-white/10"
+            >
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10" />
+              <img 
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                alt="n8n Workflows"
+              />
+              <div className="absolute bottom-0 left-0 p-8 z-20">
+                <span className="bg-purple-600 text-[10px] px-3 py-1 rounded-full uppercase font-bold text-white mb-4 inline-block">Automação</span>
+                <h3 className="text-2xl font-bold text-white mb-2">Workflow Builder</h3>
+                <p className="text-slate-300 text-sm">Visualização de dados em tempo real para operações complexas.</p>
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+</file>
+
+<file path="src/sections/Services.jsx">
+import { motion } from "framer-motion";
+import { Cpu, Globe, Zap } from "lucide-react";
+
+const services = [
+  {
+    title: "Automação com N8N",
+    description: "Conectamos suas ferramentas e criamos fluxos inteligentes que trabalham por você 24/7.",
+    icon: Zap,
+    className: "md:col-span-2 bg-gradient-to-br from-blue-600/20 to-transparent",
+  },
+  {
+    title: "Desenvolvimento Web",
+    description: "Sites de alta performance com design do seu estilo, trazendo modernidade tecnólogica a sua empresa.",
+    icon: Globe,
+    className: "md:col-span-1 bg-slate-900/50",
+  },
+  {
+    title: "Sistemas de Software",
+    description: "Arquiteturas escaláveis para negócios que não podem parar.",
+    icon: Cpu,
+    className: "md:col-span-3 bg-slate-900/50",
+  },
+];
+
+export default function Services() {
+  return (
+    <section id="servicos" className="py-24 px-6 max-w-7xl mx-auto scroll-mt-24">
+      <motion.h2 
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }} // PERFORMANCE: Roda apenas uma vez
+        transition={{ duration: 0.6 }}
+        className="text-4xl font-bold text-white mb-12 text-center"
+      >
+        Nossas <span className="text-blue-500 text-glow">Especialidades</span>
+      </motion.h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {services.map((service, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }} // Inicia quando 20% do card aparece
+            transition={{ 
+              duration: 0.5, 
+              delay: index * 0.1, 
+              ease: [0.215, 0.61, 0.355, 1] // Curva de saída suave (Senior)
+            }}
+            // OTIMIZAÇÃO: will-change-transform avisa a GPU para preparar a animação
+            className={`p-8 rounded-3xl border border-white/10 hover:border-blue-500/50 transition-colors duration-500 group will-change-transform ${service.className}`}
+          >
+            <service.icon className="text-blue-500 mb-6 group-hover:scale-110 transition-transform duration-500" size={40} />
+            <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+            <p className="text-slate-400 leading-relaxed">{service.description}</p>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+}
+</file>
+
+<file path="src/sections/Testimonials.jsx">
+import { motion } from "framer-motion";
+import { Quote } from "lucide-react";
+
+const testimonials = [
+  { name: "Ricardo Silva", role: "CEO TechFlow", content: "Automação n8n de outro nível." },
+  { name: "Ana Oliveira", role: "Ops Manager", content: "Sistema rápido e intuitivo." },
+  { name: "Marcos Vinte", role: "Founder X", content: "Visão técnica impecável." },
+];
+
+export default function Testimonials() {
+  return (
+    <section id="depoimentos" className="py-24 px-6 bg-slate-950 scroll-mt-24 overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <Quote className="text-blue-500 mx-auto mb-4 opacity-30" size={40} />
+          <h2 className="text-4xl font-bold text-white">Nossos <span className="text-blue-500 text-glow">Parceiros</span></h2>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((t, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ 
+                duration: 0.6, 
+                delay: i * 0.15, // Efeito cascata suave
+                ease: "easeOut" 
+              }}
+              // OTIMIZAÇÃO: Isolando o card para renderização acelerada
+              className="p-8 rounded-3xl bg-slate-900/30 border border-white/5 hover:border-blue-500/20 transition-colors duration-500 will-change-transform"
+            >
+              <p className="text-slate-400 italic mb-8 leading-relaxed">"{t.content}"</p>
+              <div>
+                <h4 className="text-white font-bold">{t.name}</h4>
+                <p className="text-blue-500 text-sm">{t.role}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+</file>
+
+<file path="src/util.js">
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs) {
+  return twMerge(clsx(inputs));
+}
+</file>
+
+<file path="vite.config.js">
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react()],
+})
+</file>
+
+</files>
