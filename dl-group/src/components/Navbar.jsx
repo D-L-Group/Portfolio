@@ -3,7 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import dlGroupLogo from "../assets/dl-group-logo-removebg-preview.png";
 
-export default function Navbar() {
+// CORREÇÃO 1: Adicione { onOpenModal } aqui dentro dos parênteses
+export default function Navbar({ onOpenModal }) {
   const [isOpen, setIsOpen] = useState(false);
   const [hoveredPath, setHoveredPath] = useState(null);
 
@@ -11,15 +12,14 @@ export default function Navbar() {
     { name: "Início", id: "home" },
     { name: "Serviços", id: "servicos" },
     { name: "Resultados", id: "produtos" },
-    // NOVO LINK ADICIONADO:
     { name: "Clientes", id: "depoimentos" },
+    {}
   ];
 
   const scrollToSection = (e, id) => {
     e.preventDefault();
     const element = document.getElementById(id);
     if (element) {
-      // Offset de 100 para compensar a barra flutuante e o respiro do design
       window.scrollTo({
         top: element.offsetTop - 100,
         behavior: "smooth",
@@ -32,13 +32,13 @@ export default function Navbar() {
     <nav className="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] z-[100] max-w-7xl">
       <div className="flex items-center justify-between w-full h-16 md:h-20 px-6 md:px-10 bg-slate-900/60 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl relative">
         
-        {/* LOGO POP-OUT */}
+        {/* LOGO - CORREÇÃO 2: Troque o onClick para onOpenModal */}
         <div className="relative h-full flex items-center">
           <img 
             src={dlGroupLogo} 
             alt="DL Group" 
             className="h-24 md:h-32 w-auto cursor-pointer object-contain transition-transform hover:scale-110 active:scale-95 drop-shadow-[0_0_20px_rgba(59,130,246,0.3)]"
-            onClick={(e) => scrollToSection(e, "contato")}
+             onClick={(e) => scrollToSection(e, "contato")}
           />
         </div>
 
@@ -54,7 +54,6 @@ export default function Navbar() {
               className="relative text-base font-semibold text-slate-300 hover:text-white transition-colors py-2"
             >
               {link.name}
-              
               {hoveredPath === link.id && (
                 <motion.div
                   layoutId="navbar-underline"
@@ -65,18 +64,20 @@ export default function Navbar() {
             </a>
           ))}
           
-          <button className="ml-4 px-8 py-2 bg-blue-600 rounded-full text-white font-bold text-3x1 hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/20 active:scale-95">
+          {/* BOTÃO CONTATO DESKTOP - CORREÇÃO 3: Adicione o onClick={onOpenModal} */}
+          <button 
+            onClick={onOpenModal}
+            className="ml-4 px-8 py-2 bg-blue-600 rounded-full text-white font-bold text-base hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/20 active:scale-95"
+          >
             Contato
           </button>
         </div>
 
-        {/* Menu Mobile Button */}
         <button className="md:hidden text-white p-2" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* Dropdown Mobile */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -95,7 +96,12 @@ export default function Navbar() {
                 {link.name}
               </a>
             ))}
-            <button className="w-full py-4 bg-blue-600 rounded-2xl text-white font-bold text-lg">
+            
+            {/* BOTÃO MOBILE - CORREÇÃO 4: Abre o modal e fecha o menu */}
+            <button 
+              onClick={() => { onOpenModal(); setIsOpen(false); }}
+              className="w-full py-4 bg-blue-600 rounded-2xl text-white font-bold text-lg"
+            >
               Iniciar Projeto
             </button>
           </motion.div>
