@@ -15,7 +15,7 @@ export default function LeadModal({ isOpen, onClose }) {
 
     try {
       // Endpoint n8n no servidor Debian
-      const response = await fetch("https://n8n.dlgroup.cloud/webhook-test/captura-leads-dl", {
+      const response = await fetch("https://n8n.dlgroup.cloud/webhook/captura-leads-dl", {
         method: "POST",
         body: JSON.stringify(data),
         headers: { "Content-Type": "application/json" }
@@ -92,7 +92,7 @@ export default function LeadModal({ isOpen, onClose }) {
 
           {/* FORMULÁRIO PRINCIPAL */}
           {(status === "idle" || status === "sending") && (
-            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+            <form onSubmit={hannpdleSubmit} className="flex flex-col gap-5">
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input name="nome" type="text" placeholder="Seu nome" required className="bg-slate-800/50 border border-white/5 rounded-xl p-4 text-white placeholder-slate-500 outline-none focus:border-blue-500 transition-all focus:ring-1 focus:ring-blue-500/20" />
