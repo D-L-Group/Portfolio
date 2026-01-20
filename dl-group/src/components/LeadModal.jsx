@@ -15,7 +15,7 @@ export default function LeadModal({ isOpen, onClose }) {
 
     try {
       // Endpoint n8n no seu servidor Debian
-      const response = await fetch("https://n8n.dlgroup.cloud/webhook/captura-leads-dl", {
+      const response = await fetch("https://n8n.dlgroup.cloud/webhook-test/captura-leads-dl", {
         method: "POST",
         body: JSON.stringify(data),
         headers: { "Content-Type": "application/json" }
