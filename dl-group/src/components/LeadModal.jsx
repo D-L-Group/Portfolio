@@ -15,7 +15,7 @@ export default function LeadModal({ isOpen, onClose }) {
 
     try {
       // Endpoint n8n no servidor Debian
-      const response = await fetch("https://n8n.dlgroup.cloud/webhook/captura-leads-dl", {
+      const response = await fetch("https://n8n.dlgroup.cloud/webhook-test/captura-leads-dl", {
         method: "POST",
         body: JSON.stringify(data),
         headers: { "Content-Type": "application/json" }
@@ -115,9 +115,9 @@ export default function LeadModal({ isOpen, onClose }) {
                   }`}
                 >
                   <option value="" className="bg-slate-900 text-slate-500">Investimento Pretendido</option>
-                  <option value="low" className="bg-slate-900 text-white">Até R$ 5.000</option>
-                  <option value="medium" className="bg-slate-900 text-white">R$ 5.000 - R$ 15.000</option>
-                  <option value="high" className="bg-slate-900 text-white">Acima de R$ 15.000</option>
+                  <option value="Até R$ 5.000" className="bg-slate-900 text-white">Até R$ 5.000</option>
+                  <option value="R$ 5.000 - R$ 15.000" className="bg-slate-900 text-white">R$ 5.000 - R$ 15.000</option>
+                  <option value="Acima de R$ 15.000" className="bg-slate-900 text-white">Acima de R$ 15.000</option>
                 </select>
                 <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-500">
                   <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6 6L11 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
