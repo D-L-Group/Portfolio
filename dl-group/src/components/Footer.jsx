@@ -1,8 +1,8 @@
 import { Mail, Instagram, ArrowUpRight } from "lucide-react";
-// MUDANÇA: Alterado de dlGroupLogo para dlMonogram
+
 import dlMonogram from "../assets/dl-monogram-removebg-preview.png";
 
-// CORREÇÃO 1: Adicione { onOpenModal } para receber a função do App.jsx
+
 export default function Footer({ onOpenModal }) {
   return (
     <footer id="contato" className="pt-24 pb-12 px-6 border-t border-white/5 bg-slate-950">
@@ -13,8 +13,7 @@ export default function Footer({ onOpenModal }) {
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">
               Bora escalar <br /> <span className="text-blue-500">seu negócio?</span>
             </h2>
-            
-            {/* CORREÇÃO 2: Adicionado onClick={onOpenModal} no botão azul */}
+   
             <button 
               onClick={onOpenModal}
               className="group flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-full font-bold transition-all mx-auto shadow-lg shadow-blue-500/20 active:scale-95"
@@ -24,7 +23,7 @@ export default function Footer({ onOpenModal }) {
           </div>
 
           <div className="flex flex-col items-center gap-6">
-             {/* MUDANÇA: Agora utiliza o dlMonogram */}
+
              <img src={dlMonogram} alt="DL Monogram" className="h-16 opacity-60 hover:opacity-100 transition-opacity duration-500" />
              
              <div className="flex gap-4">

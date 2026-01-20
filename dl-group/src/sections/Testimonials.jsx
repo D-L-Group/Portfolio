@@ -30,10 +30,10 @@ export default function Testimonials() {
               viewport={{ once: true }}
               transition={{ 
                 duration: 0.6, 
-                delay: i * 0.15, // Efeito cascata suave
+                delay: i * 0.15, 
                 ease: "easeOut" 
               }}
-              // OTIMIZAÇÃO: Isolando o card para renderização acelerada
+           
               className="p-8 rounded-3xl bg-slate-900/30 border border-white/5 hover:border-blue-500/20 transition-colors duration-500 will-change-transform"
             >
               <p className="text-slate-400 italic mb-8 leading-relaxed">"{t.content}"</p>

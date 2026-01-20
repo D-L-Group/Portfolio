@@ -2,16 +2,13 @@ import { motion, useMotionValue, useSpring, useMotionTemplate, useInView } from 
 import { useRef } from "react";
 import { TrendingUp, TrendingDown, ArrowUpRight, ShieldCheck, Zap } from "lucide-react";
 
-/**
- * Componente Analítico Senior
- * Focado em visualização de ROI e Impacto Financeiro
- */
+
 const MetricCard = ({ type }) => {
   const isUp = type === "up";
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.4 });
   
-  // Interatividade Senior: Spotlight que segue o mouse
+
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
@@ -109,12 +106,11 @@ const MetricCard = ({ type }) => {
 export default function Results() {
   return (
     <section id="produtos" className="py-32 bg-slate-950 relative overflow-hidden scroll-mt-24">
-      {/* Luzes de ambiência otimizadas */}
+    
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[150px] pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
-        {/* SEO Header: Focado em Conversão e Autoridade */}
         <header className="mb-24 text-center md:text-left">
           <motion.div 
             initial={{ opacity: 0, x: -20 }}

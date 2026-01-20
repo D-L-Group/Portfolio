@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import dlGroupLogo from "../assets/dl-group-logo-removebg-preview.png";
 
-// CORREÇÃO 1: Adicione { onOpenModal } aqui dentro dos parênteses
 export default function Navbar({ onOpenModal }) {
   const [isOpen, setIsOpen] = useState(false);
   const [hoveredPath, setHoveredPath] = useState(null);
@@ -32,7 +31,6 @@ export default function Navbar({ onOpenModal }) {
     <nav className="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] z-[100] max-w-7xl">
       <div className="flex items-center justify-between w-full h-16 md:h-20 px-6 md:px-10 bg-slate-900/60 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl relative">
         
-        {/* LOGO - CORREÇÃO 2: Troque o onClick para onOpenModal */}
         <div className="relative h-full flex items-center">
           <img 
             src={dlGroupLogo} 
@@ -64,7 +62,7 @@ export default function Navbar({ onOpenModal }) {
             </a>
           ))}
           
-          {/* BOTÃO CONTATO DESKTOP - CORREÇÃO 3: Adicione o onClick={onOpenModal} */}
+          {/* BOTÃO CONTATO DESKTOP */}
           <button 
             onClick={onOpenModal}
             className="ml-4 px-8 py-2 bg-blue-600 rounded-full text-white font-bold text-base hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/20 active:scale-95"
@@ -97,7 +95,7 @@ export default function Navbar({ onOpenModal }) {
               </a>
             ))}
             
-            {/* BOTÃO MOBILE - CORREÇÃO 4: Abre o modal e fecha o menu */}
+            {/* BOTÃO MOBILE -*/}
             <button 
               onClick={() => { onOpenModal(); setIsOpen(false); }}
               className="w-full py-4 bg-blue-600 rounded-2xl text-white font-bold text-lg"

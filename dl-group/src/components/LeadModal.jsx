@@ -14,14 +14,17 @@ export default function LeadModal({ isOpen, onClose }) {
     const data = Object.fromEntries(formData);
 
     try {
-      // Endpoint n8n no seu servidor Debian
-      const response = await fetch("https://n8n.dlgroup.cloud/webhook-test/captura-leads-dl", {
+      // Endpoint n8n no servidor Debian
+      const response = await fetch("https://n8n.dlgroup.cloud/webhook/captura-leads-dl", {
         method: "POST",
         body: JSON.stringify(data),
         headers: { "Content-Type": "application/json" }
       });
 
       if (!response.ok) throw new Error("Erro no servidor");
+
+      const resultado = await response.json();
+      console.log("Resposta do servidor DL GROUP", resultado)
 
       setStatus("success");
       // Reseta o estado e fecha o modal após sucesso
@@ -42,7 +45,7 @@ export default function LeadModal({ isOpen, onClose }) {
   return (
     <AnimatePresence>
       <div className="fixed inset-0 z-[200] flex items-center justify-center p-4">
-        {/* Overlay com Backdrop Blur Premium */}
+ 
         <motion.div 
           initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
           onClick={onClose}
