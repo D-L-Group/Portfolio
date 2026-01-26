@@ -4,7 +4,7 @@ import { Cpu, Globe, Zap } from "lucide-react";
 const services = [
   { title: "Automação com Inteligência Artificial", description: "Conectamos suas ferramentas e criamos fluxos inteligentes.", icon: Zap, className: "md:col-span-2 bg-gradient-to-br from-blue-600/20 to-transparent" },
   { title: "Desenvolvimento Web", description: "Sites de alta performance com design moderno.", icon: Globe, className: "md:col-span-1 bg-slate-900/50" },
-  { title: "Sistemas de Software", description: "Arquiteturas escaláveis para negócios.", icon: Cpu, className: "md:col-span-3 bg-slate-900/50" },
+  { title: "Sistemas de Software", description: "Desenvolvimento de sistemas e aplicações multiplataforma.", icon: Cpu, className: "md:col-span-3 bg-slate-900/50" },
 ];
 
 export default function Services() {

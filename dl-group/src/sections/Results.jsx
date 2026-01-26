@@ -18,7 +18,7 @@ const MetricCard = ({ type }) => {
     mouseY.set(clientY - top);
   }
 
-  const colorHex = isUp ? "#3b82f6" : "#ef4444";
+  const colorHex = isUp ? "#3b82f6" : "#4bc742";
   const pathData = isUp 
     ? "M 10 80 C 40 70 70 40 130 10" 
     : "M 10 10 C 40 20 70 50 130 80";
@@ -46,7 +46,7 @@ const MetricCard = ({ type }) => {
       <div className="relative bg-slate-950/90 backdrop-blur-3xl rounded-[2.4rem] p-8 md:p-12 h-full border border-white/5">
         <header className="flex justify-between items-start mb-10">
           <div>
-            <div className={`flex items-center gap-2 mb-3 ${isUp ? 'text-blue-400' : 'text-red-400'}`}>
+            <div className={`flex items-center gap-2 mb-3 ${isUp ? 'text-blue-400' : 'text-green-400'}`}>
               {isUp ? <Zap size={18} /> : <ShieldCheck size={18} />}
               <span className="text-[10px] font-bold uppercase tracking-[0.3em]">Business Intelligence</span>
             </div>
