@@ -135,59 +135,7 @@ export default function Results() {
           <MetricCard type="down" />
         </div>
 
-        {/* Showcase de Produtos: SEO Otimizado com Títulos Semânticos */}
-        <div className="space-y-20">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-white/5 pb-10">
-            <h3 className="text-white text-4xl font-bold tracking-tight">Ecosistema de <span className="text-slate-500">Soluções</span></h3>
-            <p className="text-slate-400 max-w-sm text-sm">Sistemas projetados para integração total com workflows de inteligência artificial.</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* Produto 1: DL Automate Pro */}
-            <motion.article 
-              whileHover={{ y: -10 }}
-              className="group relative h-[520px] rounded-[3rem] overflow-hidden bg-slate-900/30 border border-white/5 transition-all duration-700 hover:border-blue-500/30 shadow-2xl"
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1551288049-bbda38a594a0?auto=format&fit=crop&q=80&w=1000" 
-                alt="Interface do DL Automate Pro mostrando gestão de leads e automação de CRM"
-                className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10" />
-              
-              <div className="absolute bottom-0 left-0 p-12 z-20 w-full">
-                <span className="bg-blue-600/20 backdrop-blur-md text-blue-400 text-[10px] px-4 py-1.5 rounded-full uppercase font-bold mb-6 inline-block border border-blue-500/20">SaaS Platform</span>
-                <h4 className="text-4xl font-bold text-white mb-4">DL Automate Pro</h4>
-                <p className="text-slate-400 text-base leading-relaxed max-w-xs mb-8">Gestão de leads inteligente com fluxos autônomos integrados ao n8n.</p>
-                <button className="flex items-center gap-2 text-white font-bold text-xs uppercase tracking-widest group/btn border-b border-white/20 pb-2 hover:border-white transition-all">
-                  Explorar Tecnologia <ArrowUpRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
-                </button>
-              </div>
-            </motion.article>
-
-            {/* Produto 2: Workflow Builder */}
-            <motion.article 
-              whileHover={{ y: -10 }}
-              className="group relative h-[520px] rounded-[3rem] overflow-hidden bg-slate-900/30 border border-white/5 transition-all duration-700 hover:border-purple-500/30 shadow-2xl"
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1000" 
-                alt="Visualização de fluxos lógicos e arquitetura de software"
-                className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10" />
-
-              <div className="absolute bottom-0 left-0 p-12 z-20 w-full">
-                <span className="bg-purple-600/20 backdrop-blur-md text-purple-400 text-[10px] px-4 py-1.5 rounded-full uppercase font-bold mb-6 inline-block border border-purple-500/20">Enterprise AI</span>
-                <h4 className="text-4xl font-bold text-white mb-4">Workflow Builder</h4>
-                <p className="text-slate-400 text-base leading-relaxed max-w-xs mb-8">Arquitetura de alta performance para automação de tarefas corporativas complexas.</p>
-                <button className="flex items-center gap-2 text-white font-bold text-xs uppercase tracking-widest group/btn border-b border-white/20 pb-2 hover:border-white transition-all">
-                  Explorar Tecnologia <ArrowUpRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
-                </button>
-              </div>
-            </motion.article>
-          </div>
-        </div>
+        
       </div>
     </section>
   );

@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Hero from "./sections/Hero";
 import Services from "./sections/Services";
 import Results from "./sections/Results";
+import Products from "./sections/Products.jsx"
 import Testimonials from "./sections/Testimonials";
 import LeadModal from "./components/LeadModal";
 
@@ -17,6 +18,7 @@ function App() {
       <Hero onOpenModal={() => setIsModalOpen(true)} />
       <Services />
       <Results />
+      <Products />
       <Testimonials />
       <Footer onOpenModal={() => setIsModalOpen(true)} />
 
