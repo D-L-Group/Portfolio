@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import dlMonogram from "../assets/dl-monogram-removebg-preview.png";
+import dlMonogram from "../assets/White - No BG.png";
 
 export default function Hero() {
   return (

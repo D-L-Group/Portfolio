@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import dlGroupLogo from "../assets/White - No BG.png";
+import dlGroupLogo from "../assets/Group - White no BG.png";
 
 export default function Navbar({ onOpenModal }) {
   const [isOpen, setIsOpen] = useState(false);
