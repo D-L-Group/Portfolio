@@ -11,7 +11,7 @@ export default function Navbar({ onOpenModal }) {
     { name: "Início", id: "home" },
     { name: "Serviços", id: "servicos" },
     { name: "Resultados", id: "produtos" },
-    { name: "Clientes", id: "depoimentos" },
+    //{ name: "Clientes", id: "depoimentos" },
     {}
   ];
 

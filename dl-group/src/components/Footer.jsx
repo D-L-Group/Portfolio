@@ -11,7 +11,7 @@ export default function Footer({ onOpenModal }) {
           
           <div>
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">
-              Bora escalar <br /> <span className="text-blue-500">seu negócio?</span>
+              Vamos escalar <br /> <span className="text-blue-500">seu negócio?</span>
             </h2>
    
             <button 
@@ -31,7 +31,7 @@ export default function Footer({ onOpenModal }) {
                   <Instagram size={20} className="group-hover:text-blue-500 transition-colors" />
                 </a>
 
-                <a href="mailto:dlgroup.business@gmail.com?subject=Contato&body=Olá, gostaria de agendar uma reunião" className="p-3 rounded-full bg-slate-900 border border-white/10 hover:border-blue-500 text-slate-400 hover:text-white transition-all group">
+                <a href="mailto:dlgroup.contato@gmail.com?subject=Contato&body=Olá, gostaria de agendar uma reunião" className="p-3 rounded-full bg-slate-900 border border-white/10 hover:border-blue-500 text-slate-400 hover:text-white transition-all group">
                   <Mail size={20} className="group-hover:text-blue-500 transition-colors" />
                 </a>
              </div>

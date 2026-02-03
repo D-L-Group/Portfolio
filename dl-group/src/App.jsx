@@ -19,7 +19,6 @@ function App() {
       <Services />
       <Results />
       <Products />
-      <Testimonials />
       <Footer onOpenModal={() => setIsModalOpen(true)} />
 
       <LeadModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />

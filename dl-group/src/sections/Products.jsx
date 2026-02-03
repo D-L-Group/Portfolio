@@ -3,12 +3,12 @@ import { ArrowUpRight } from "lucide-react";
 
 const products = [
   {
-    id: "dl-automate-pro",
-    tag: "SaaS Platform",
+    id: "atendente-whatsapp",
+    tag: "Inteligencia Artificial",
     tagColor: "blue",
-    title: "DL Automate Pro",
+    title: "Atendente de Whatsapp",
     description:
-      "Gestão de leads inteligente com fluxos autônomos integrados ao n8n.",
+      "IA para WhatsApp, 24/7 e totalmente personalizável, que automatiza atendimento, vendas e suporte ao cliente.",
     image:
       "https://images.unsplash.com/photo-1551288049-bbda38a594a0?auto=format&fit=crop&q=80&w=1000",
     alt:
@@ -46,7 +46,7 @@ export default function Products() {
       </h3>
 
       <p className="text-slate-400 max-w-sm text-sm">
-        Sistemas projetados para integração total com workflows de inteligência artificial.
+        Sistemas projetados para integração total com inteligência artificial.
       </p>
     </header>
 
