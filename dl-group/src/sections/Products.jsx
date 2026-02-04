@@ -5,32 +5,62 @@ const products = [
   {
     id: "atendente-whatsapp",
     tag: "Inteligencia Artificial",
-    tagColor: "blue",
+    tagColor: "green",
     title: "Atendente de Whatsapp",
     description:
       "IA para WhatsApp, 24/7 e totalmente personalizável, que automatiza atendimento, vendas e suporte ao cliente.",
     image:
-      "https://images.unsplash.com/photo-1551288049-bbda38a594a0?auto=format&fit=crop&q=80&w=1000",
+      "https://images.unsplash.com/photo-1600859343194-a5fae9ef9f66?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt:
-      "Interface do DL Automate Pro mostrando gestão de leads e automação de CRM",
+      "Whatsapp agent",
+    borderHover: "hover:border-green-500/30",
+    tagStyles:
+      "bg-green-600/20 text-green-400 border-green-500/20",
+  },
+  {
+    id: "atendente-ligacao",
+    tag: "Inteligencia Artificial",
+    tagColor: "purple",
+    title: "Atendente de ligação",
+    description:
+      "IA para atendimento telefônico 24/7, personalizável, que filtra e direciona chamadas automaticamente.",
+    image:
+      "https://images.unsplash.com/photo-1766066014237-00645c74e9c6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt:
+      "Atendente de ligacoes",
+    borderHover: "hover:border-purple-500/30",
+    tagStyles:
+      "bg-purple-600/20 text-purple-400 border-purple-500/20",
+  },
+  {
+    id: "site",
+    tag: "Sistema Web",
+    tagColor: "blue",
+    title: "Site Personalizado",
+    description:
+      "Site profissional e personalizado para cada empresa, desenvolvido sob medida para refletir sua marca e gerar mais credibilidade",
+    image:
+      "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt:
+      "Sites personalizados",
     borderHover: "hover:border-blue-500/30",
     tagStyles:
       "bg-blue-600/20 text-blue-400 border-blue-500/20",
   },
   {
-    id: "workflow-builder",
-    tag: "Enterprise AI",
-    tagColor: "purple",
-    title: "Workflow Builder",
+    id: "sistema",
+    tag: "Sistema de Software",
+    tagColor: "yellow",
+    title: "Sistema Personalizado",
     description:
-      "Arquitetura de alta performance para automação de tarefas corporativas complexas.",
+      "Sistema sob medida com integrações inteligentes para automatizar e escalar sua operação.",
     image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1000",
+      "https://images.unsplash.com/photo-1608303588026-884930af2559?q=80&w=703&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt:
-      "Visualização de fluxos lógicos e arquitetura de software",
-    borderHover: "hover:border-purple-500/30",
+      "Sistema personalizado",
+    borderHover: "hover:border-yellow-500/30",
     tagStyles:
-      "bg-purple-600/20 text-purple-400 border-purple-500/20",
+      "bg-yellow-600/20 text-yellow-400 border-yellow-500/20",
   },
 ];
 

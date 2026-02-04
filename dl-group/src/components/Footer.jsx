@@ -1,6 +1,6 @@
 import { Mail, Instagram, ArrowUpRight } from "lucide-react";
 
-import dlMonogram from "../assets/dl-monogram-removebg-preview.png";
+import dlMonogram from "../assets/White - No BG.png";
 
 
 export default function Footer({ onOpenModal }) {
@@ -24,7 +24,7 @@ export default function Footer({ onOpenModal }) {
 
           <div className="flex flex-col items-center gap-6">
 
-             <img src={dlMonogram} alt="DL Monogram" className="h-16 opacity-60 hover:opacity-100 transition-opacity duration-500" />
+             <img src={dlMonogram} alt="DL Monogram" className="h-8 opacity-60 hover:opacity-100 transition-opacity duration-500" />
              
              <div className="flex gap-4">
                 <a href="https://www.instagram.com/dlgroup__?igsh=YmI1Nm5zeDA4eXI2&utm_source=qr" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-slate-900 border border-white/10 hover:border-blue-500 text-slate-400 hover:text-white transition-all group">
