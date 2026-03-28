@@ -11,7 +11,7 @@ import LeadModal from "./components/LeadModal";
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false); 
   return (
-    <main className="bg-slate-950 min-h-screen">
+    <main className="bg-[#0A0A0A] min-h-screen">
     
       <Navbar onOpenModal={() => setIsModalOpen(true)} />
       

@@ -105,7 +105,7 @@ const MetricCard = ({ type }) => {
 
 export default function Results() {
   return (
-    <section id="produtos" className="py-32 bg-slate-950 relative overflow-hidden scroll-mt-24">
+    <section id="resultados" className="py-32 bg-[#0A0A0A] relative overflow-hidden scroll-mt-24">
     
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[150px] pointer-events-none" />
       

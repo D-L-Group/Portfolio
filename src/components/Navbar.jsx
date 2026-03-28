@@ -10,7 +10,8 @@ export default function Navbar({ onOpenModal }) {
   const navLinks = [
     { name: "Início", id: "home" },
     { name: "Serviços", id: "servicos" },
-    { name: "Resultados", id: "produtos" },
+    { name: "Resultados", id: "resultados" },
+    { name: "Produtos", id: "produtos" },
     //{ name: "Clientes", id: "depoimentos" },
     {}
   ];
