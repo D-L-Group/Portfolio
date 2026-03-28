@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import dlGroupLogo from "../assets/Group - White no BG.png";
+import dlGroupLogo from "../assets/logo-nobg.png";
 
 export default function Navbar({ onOpenModal }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,13 +29,13 @@ export default function Navbar({ onOpenModal }) {
 
   return (
     <nav className="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] z-[100] max-w-7xl">
-      <div className="flex items-center justify-between w-full h-16 md:h-20 px-6 md:px-10 bg-slate-900/60 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl relative">
+      <div className="flex items-center justify-between w-full h-16 md:h-20 px-6 md:px-10 bg-[#5325DE]/6 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl relative">
         
         <div className="relative h-full flex items-center w-32 md:w-40">
           <img 
             src={dlGroupLogo} 
             alt="DL Group" 
-            className="h-8 md:h-10 w-auto cursor-pointer object-contain transition-transform hover:scale-110 active:scale-95"
+            className="h-6 md:h-8 w-auto cursor-pointer object-contain transition-transform hover:scale-110 active:scale-95"
              onClick={(e) => scrollToSection(e, "contato")}
           />
         </div>
@@ -55,7 +55,7 @@ export default function Navbar({ onOpenModal }) {
               {hoveredPath === link.id && (
                 <motion.div
                   layoutId="navbar-underline"
-                  className="absolute bottom-0 left-0 right-0 h-[2px] bg-blue-500 shadow-[0_0_12px_rgba(59,130,246,0.8)]"
+                  className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#5325DE] shadow-[0_0_12px_rgba(59,130,246,0.8)]"
                   transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                 />
               )}
@@ -65,7 +65,7 @@ export default function Navbar({ onOpenModal }) {
           {/* BOTÃO CONTATO DESKTOP */}
           <button 
             onClick={onOpenModal}
-            className="px-8 py-2 bg-blue-600 rounded-full text-white font-bold text-base hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/20 active:scale-95"
+            className="px-8 py-2 bg-[#5325DE] rounded-full text-white font-bold text-base hover:bg-[#7A57E2] transition-all shadow-lg shadow-blue-500/20 active:scale-95"
           >
             Contato
           </button>
@@ -82,7 +82,7 @@ export default function Navbar({ onOpenModal }) {
             initial={{ opacity: 0, scale: 0.95, y: -10 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: -10 }}
-            className="absolute top-24 left-0 right-0 bg-slate-900/98 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] p-8 flex flex-col gap-6 md:hidden z-[101] shadow-2xl"
+            className="absolute top-24 left-0 right-0 bg-[#5325DE]/10 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] p-8 flex flex-col gap-6 md:hidden z-[101] shadow-2xl"
           >
             {navLinks.map((link) => (
               <a 
@@ -98,7 +98,7 @@ export default function Navbar({ onOpenModal }) {
             {/* BOTÃO MOBILE -*/}
             <button 
               onClick={() => { onOpenModal(); setIsOpen(false); }}
-              className="w-full py-4 bg-blue-600 rounded-2xl text-white font-bold text-lg"
+              className="w-full py-4 bg-[#5325DE] rounded-2xl text-white font-bold text-lg"
             >
               Iniciar Projeto
             </button>
