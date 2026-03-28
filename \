@@ -5,6 +5,8 @@ export default function Hero() {
   return (
     <section id="home" className="relative w-full h-auto md:h-screen bg-[#0A0A0A] flex flex-col items-center justify-center overflow-visible pt-48 pb-32 md:pt-0 md:pb-0">
      
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] md:w-[900px] h-[600px] md:h-[900px] bg-[#5325DE]/50 rounded-full blur-[100px] md:blur-[160px] pointer-events-none z-0" />
+
       <div className="relative z-10 flex flex-col items-center text-center px-6">
         <motion.img 
             src={dlMonogram}
@@ -30,7 +32,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-slate-400 text-lg max-w-xl leading-relaxed"
         >
-            Transformando operações complexas e repetitivas em fluxos modernos com Inteligência Artificial e tecnologia de ponta.
+            Transformando operações complexas em fluxos modernos com Inteligência Artificial e tecnologia de ponta.
         </motion.p>
       </div>
     </section>
