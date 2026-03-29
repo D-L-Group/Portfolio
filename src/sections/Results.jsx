@@ -30,7 +30,7 @@ const MetricCard = ({ type }) => {
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className="group relative p-px rounded-[2.5rem] bg-white/10 overflow-hidden"
+      className="group relative p-px rounded-[2.5rem] overflow-hidden"
       aria-label={isUp ? "Gráfico de aumento de lucros" : "Gráfico de redução de custos"}
     >
       {/* Efeito Spotlight Dinâmico */}
@@ -38,12 +38,12 @@ const MetricCard = ({ type }) => {
         className="pointer-events-none absolute -inset-px rounded-[2.5rem] opacity-0 group-hover:opacity-100 transition duration-500"
         style={{
           background: useMotionTemplate`
-            radial-gradient(350px circle at ${mouseX}px ${mouseY}px, ${isUp ? 'rgba(59, 130, 246, 0.15)' : 'rgba(239, 68, 68, 0.15)'}, transparent 80%)
+            radial-gradient(350px circle at ${mouseX}px ${mouseY}px, ${isUp ? 'rgba(59, 130, 246, 0.15)' : 'rgba(74, 222, 128, 0.15)'}, transparent 50%)
           `
         }}
       />
 
-      <div className="relative bg-slate-950/90 backdrop-blur-3xl rounded-[2.4rem] p-8 md:p-12 h-full border border-white/5">
+      <div className="relative bg-[#5325DE]/5 backdrop-blur-3xl rounded-[2.4rem] p-8 md:p-12 h-full border border-white/5">
         <header className="flex justify-between items-start mb-10">
           <div>
             <div className={`flex items-center gap-2 mb-3 ${isUp ? 'text-blue-400' : 'text-green-400'}`}>
@@ -107,8 +107,6 @@ export default function Results() {
   return (
     <section id="resultados" className="py-32 bg-[#0A0A0A] relative overflow-hidden scroll-mt-24">
     
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[150px] pointer-events-none" />
-      
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         <header className="mb-24 text-center md:text-left">
@@ -118,11 +116,11 @@ export default function Results() {
             viewport={{ once: true }}
             className="flex items-center gap-3 justify-center md:justify-start mb-6"
           >
-            <div className="w-5 h-[1px] bg-blue-500/50" />
-            <span className="text-blue-500 font-bold tracking-[0.4em] uppercase text-[10px]">ROI & Automação</span>
+            <div className="w-5 h-[1px] bg-[#5325DE]/50" />
+            <span className="text-[#5325DE] font-bold tracking-[0.4em] uppercase text-[10px]">Retorno sobre investimento</span>
           </motion.div>
           <h2 className="text-white text-4xl md:text-7xl font-bold tracking-tighter leading-[0.9] mb-8">
-            Resultados que <br /> se <span className="text-slate-500">manifestam.</span>
+            Resultados que <br /> se <span className="text-[#5325DE] text-glow">manifestam.</span>
           </h2>
           <p className="text-slate-400 max-w-xl text-lg leading-relaxed">
             Não entregamos apenas produtos. Geramos eficiência financeira através de arquiteturas inteligentes e automação de processos.
