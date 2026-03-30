@@ -31,7 +31,7 @@ export default function Footer({ onOpenModal }) {
              <img src={dlMonogram} alt="DL Monogram" className="h-8 opacity-60 hover:opacity-100 transition-opacity duration-500" />
              
              <div className="flex gap-4">
-                <a href="https://www.instagram.com/dlgroup.br/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-[#5325DE]/10 border border-white/10 hover:border-[#5325DE] text-slate-400 hover:text-white transition-all group">
+                <a href="https://www.instagram.com/docalli.br/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-[#5325DE]/10 border border-white/10 hover:border-[#5325DE] text-slate-400 hover:text-white transition-all group">
                   <Instagram size={20} className="group-hover:text-[#5325DE] transition-colors" />
                 </a>
 
