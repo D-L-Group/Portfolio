@@ -56,7 +56,7 @@ export default function LeadModal({ isOpen, onClose }) {
           initial={{ scale: 0.9, opacity: 0, y: 20 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
           exit={{ scale: 0.9, opacity: 0, y: 20 }}
-          className="relative w-full max-w-2xl bg-slate-900 border border-white/10 p-8 md:p-12 rounded-[2.5rem] shadow-2xl overflow-y-auto max-h-[90vh]"
+          className="relative w-full max-w-2xl bg-[#170F30] border border-white/10 p-8 md:p-12 rounded-[2.5rem] shadow-2xl overflow-y-auto max-h-[90vh]"
         >
 
             
@@ -95,41 +95,45 @@ export default function LeadModal({ isOpen, onClose }) {
            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input name="nome" type="text" placeholder="Seu nome" required className="bg-slate-800/50 border border-white/5 rounded-xl p-4 text-white placeholder-slate-500 outline-none focus:border-blue-500 transition-all focus:ring-1 focus:ring-blue-500/20" />
-                <input name="empresa" type="text" placeholder="Nome da Empresa" required className="bg-slate-800/50 border border-white/5 rounded-xl p-4 text-white placeholder-slate-500 outline-none focus:border-blue-500 transition-all focus:ring-1 focus:ring-blue-500/20" />
+                <input name="nome" type="text" placeholder="Seu nome" required className="bg-[#130C27] border border-white/10 rounded-xl p-4 text-white placeholder-slate-500/50 outline-none focus:border-[#5325DE] transition-all focus:ring-1 focus:ring-blue-500/20" />
+                <input name="empresa" type="text" placeholder="Nome da Empresa" required className="bg-[#130C27] border border-white/10 rounded-xl p-4 text-white placeholder-slate-500/50 outline-none focus:border-[#5325DE] transition-all focus:ring-1 focus:ring-blue-500/20" />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input name="email" type="email" placeholder="E-mail Corporativo" required className="bg-slate-800/50 border border-white/5 rounded-xl p-4 text-white placeholder-slate-500 outline-none focus:border-blue-500 transition-all focus:ring-1 focus:ring-blue-500/20" />
-                <input name="telefone" type="tel" placeholder="Telefone / WhatsApp" required className="bg-slate-800/50 border border-white/5 rounded-xl p-4 text-white placeholder-slate-500 outline-none focus:border-blue-500 transition-all focus:ring-1 focus:ring-blue-500/20" />
+                <input name="email" type="email" placeholder="E-mail Corporativo" required className="bg-[#130C27] border border-white/10 rounded-xl p-4 text-white placeholder-slate-500/50 outline-none focus:border-[#5325DE] transition-all focus:ring-1 focus:ring-blue-500/20" />
+                <input name="telefone" type="tel" placeholder="Telefone / WhatsApp" required className="bg-[#130C27] border border-white/10 rounded-xl p-4 text-white placeholder-slate-500/50 outline-none focus:border-[#5325DE] transition-all focus:ring-1 focus:ring-blue-500/20" />
               </div>
 
               <div className="relative">
                 <select 
-                  name="orcamento" 
+                  name="seo" 
                   required
                   value={selectedBudget}
                   onChange={(e) => setSelectedBudget(e.target.value)}
-                  className={`w-full bg-slate-800/50 border border-white/5 rounded-xl p-4 outline-none focus:border-blue-500 appearance-none cursor-pointer transition-all ${
-                    selectedBudget === "" ? "text-slate-500" : "text-white"
+                  className={`w-full bg-[#130C27] border border-white/10 rounded-xl p-4 outline-none focus:border-[#5325DE] appearance-none cursor-pointer transition-all ${
+                    selectedBudget === "" ? "text-slate-500/50" : "text-white"
                   }`}
                 >
-                  <option value="" className="bg-slate-900 text-slate-500">Investimento Pretendido</option>
-                  <option value="Até R$ 5.000" className="bg-slate-900 text-white">Até R$ 5.000</option>
-                  <option value="R$ 5.000 - R$ 15.000" className="bg-slate-900 text-white">R$ 5.000 - R$ 15.000</option>
-                  <option value="Acima de R$ 15.000" className="bg-slate-900 text-white">Acima de R$ 15.000</option>
+                  <option value="" className="bg-[#130C27] text-slate-500">Como você conheceu a gente?</option>
+                  <option value="google" className="bg-[#130C27] text-white">Google (pesquisa)</option>
+                  <option value="instagram" className="bg-[#130C27] text-white">Instagram</option>
+                  <option value="youtube" className="bg-[#130C27] text-white">YouTube</option>
+                  <option value="linkedin" className="bg-[#130C27] text-white">LinkedIn</option>
+                  <option value="anuncio" className="bg-[#130C27] text-white">Anúncio online</option>
+                  <option value="indicacao" className="bg-[#130C27] text-white">Indicação</option>
+                  <option value="outro" className="bg-[#130C27] text-white">Outro</option>
                 </select>
                 <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-500">
                   <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6 6L11 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
                 </div>
               </div>
 
-              <textarea name="mensagem" placeholder="Descreva brevemente sua necessidade." required className="w-full bg-slate-800/50 border border-white/5 rounded-xl p-4 text-white placeholder-slate-500 h-32 outline-none focus:border-blue-500 resize-none transition-all focus:ring-1 focus:ring-blue-500/20"></textarea>
+              <textarea name="mensagem" placeholder="Descreva brevemente sua necessidade." required className="w-full bg-[#130C27] border border-white/10 rounded-xl p-4 text-white placeholder-slate-500/50 h-32 outline-none focus:border-[#5325DE] resize-none transition-all focus:ring-1 focus:ring-blue-500/20"></textarea>
               
               <button 
                 type="submit" 
                 disabled={status === "sending"} 
-                className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-5 rounded-xl shadow-lg transition-all active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full bg-[#5325DE] hover:bg-[#7A57E2] text-white font-bold py-5 rounded-xl shadow-lg transition-all active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {status === "sending" ? (
                   <> <Loader2 className="animate-spin" size={20} /> Processando solicitação... </>

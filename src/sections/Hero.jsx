@@ -14,7 +14,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.8, filter: "blur(20px)" }}
             animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="w-50 md:w-90 mb-8 drop-shadow-[0_0_35px_rgba(59,130,246,0.3)]" 
+            className="w-60 md:w-90 mb-15 drop-shadow-[0_0_35px_rgba(59,130,246,0.3)]" 
         />
         
         <motion.h2
