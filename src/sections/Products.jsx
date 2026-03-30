@@ -71,11 +71,11 @@ export default function Products() {
 
     {/* Header da seção */}
     <header className="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-white/5 pb-10">
-      <h3 className="text-white text-4xl font-bold tracking-tight">
-        Ecossistema de <span className="text-slate-500">Soluções</span>
+      <h3 className="text-white text-6xl font-bold tracking-tight">
+        Ecossistema de <span className="text-[#5325DE] text-glow">Soluções</span>
       </h3>
 
-      <p className="text-slate-400 max-w-sm text-sm">
+      <p className="text-slate-400 max-w-sm text-lg text-right">
         Sistemas projetados para integração total com inteligência artificial.
       </p>
     </header>
@@ -94,7 +94,7 @@ export default function Products() {
             className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#5325DE]/10 via-slate-950/40 to-transparent z-10" />
 
           <div className="absolute bottom-0 left-0 p-12 z-20 w-full">
             <span
