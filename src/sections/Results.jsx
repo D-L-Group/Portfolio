@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { TrendingUp, TrendingDown, ArrowUpRight, ShieldCheck, Zap } from "lucide-react";
 
 
-const MetricCard = ({ type }) => {
+const MetricCard = ({ type, onOpenScalability, onOpenCostReduction }) => {
   const isUp = type === "up";
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.4 });
@@ -54,9 +54,12 @@ const MetricCard = ({ type }) => {
               {isUp ? "Escalabilidade de Lucro" : "Redução de Custos"}
             </h3>
           </div>
-          <div className="p-3 rounded-2xl bg-white/5 border border-white/10 text-slate-500 group-hover:text-white transition-colors">
-             <ArrowUpRight size={20} />
-          </div>
+          <button 
+            onClick={() => isUp ? (onOpenScalability && onOpenScalability()) : (onOpenCostReduction && onOpenCostReduction())}
+            className="p-3 rounded-2xl bg-white/5 border border-white/10 text-slate-500 group-hover:text-white transition-colors cursor-pointer hover:bg-white/10"
+          >
+            <ArrowUpRight size={20} />
+          </button>
         </header>
 
         {/* Área Técnica do Gráfico */}
@@ -103,7 +106,7 @@ const MetricCard = ({ type }) => {
   );
 };
 
-export default function Results() {
+export default function Results({ onOpenScalability, onOpenCostReduction }) {
   return (
     <section id="resultados" className="py-32 bg-[#0A0A0A] relative overflow-hidden scroll-mt-24">
     
@@ -129,8 +132,8 @@ export default function Results() {
 
         {/* Grid de Impacto Financeiro */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 ">
-          <MetricCard type="up" />
-          <MetricCard type="down" />
+          <MetricCard type="up" onOpenScalability={onOpenScalability} />
+          <MetricCard type="down" onOpenCostReduction={onOpenCostReduction} />
         </div>
 
         

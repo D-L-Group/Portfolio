@@ -111,13 +111,13 @@ export default function Products() {
               {product.description}
             </p>
 
-            <button className="flex items-center gap-2 text-white font-bold text-xs uppercase tracking-widest group/btn border-b border-white/20 pb-2 hover:border-white transition-all">
+            {/* <button className="flex items-center gap-2 text-white font-bold text-xs uppercase tracking-widest group/btn border-b border-white/20 pb-2 hover:border-white transition-all">
               Explorar Tecnologia
               <ArrowUpRight
                 size={16}
                 className="group-hover/btn:translate-x-1 transition-transform"
               />
-            </button>
+            </button> */}
           </div>
         </motion.article>
       ))}
