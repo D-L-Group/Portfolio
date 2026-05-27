@@ -23,16 +23,15 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-white text-3xl md:text-5xl font-bold tracking-tight mb-4"
         >
-            Inovação que <span className="text-[#5325DE] text-glow">Escala</span>
+            Soluções <span className="text-[#5325DE] text-glow">inteligentes</span> 
         </motion.h2>
 
         <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-slate-400 text-lg max-w-xl leading-relaxed"
-        >
-            Transformando operações complexas e repetitivas em fluxos modernos com Inteligência Artificial e tecnologia de ponta.
+            className="text-slate-400 text-lg max-w-xl leading-relaxed">
+            Projetamos sistemas sob medida. Desenvolvemos inteligência artificial, automação e infraestrutura para empresas que buscam eficiência, previsibilidade e crescimento.
         </motion.p>
       </div>
     </section>
