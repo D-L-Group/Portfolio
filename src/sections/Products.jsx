@@ -16,6 +16,7 @@ const products = [
     borderHover: "hover:border-purple-500/30",
     tagStyles:
       "bg-purple-600/20 text-purple-400 border-purple-500/20",
+    href: "https://atendente.docalli.com",
   },
   {
     id: "atendente-whatsapp",
@@ -31,6 +32,7 @@ const products = [
     borderHover: "hover:border-purple-500/30",
     tagStyles:
       "bg-purple-600/20 text-purple-400 border-purple-500/20",
+    href: "https://atendente.docalli.com",
   },
   {
     id: "assistente-arquivos",
@@ -46,6 +48,7 @@ const products = [
     borderHover: "hover:border-green-500/30",
     tagStyles:
       "bg-green-600/20 text-green-400 border-green-500/20",
+    href: "https://atendente.docalli.com",
   },
   {
     id: "comunicacao-inteligente",
@@ -61,6 +64,7 @@ const products = [
     borderHover: "hover:border-green-500/30",
     tagStyles:
       "bg-green-600/20 text-green-400 border-green-500/20",
+    href: "https://atendente.docalli.com",
   },
   {
     id: "site",
@@ -76,6 +80,7 @@ const products = [
     borderHover: "hover:border-blue-500/30",
     tagStyles:
       "bg-blue-600/20 text-blue-400 border-blue-500/20",
+    href: "https://atendente.docalli.com",
   },
   {
     id: "sistema",
@@ -91,6 +96,7 @@ const products = [
     borderHover: "hover:border-yellow-500/30",
     tagStyles:
       "bg-yellow-600/20 text-yellow-400 border-yellow-500/20",
+    href: "https://atendente.docalli.com",
   },
 ];
 
@@ -140,17 +146,20 @@ export default function Products() {
             <p className="text-slate-400 text-sm md:text-base leading-relaxed max-w-xs mb-4">
               {product.description}
             </p>
-            <motion.button 
+            <motion.a
+              href={product.href}
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95, transition: { duration: 0.01 } }}
-              className="flex items-center gap-1.5 md:gap-2 text-white font-bold text-[11px] md:text-xs uppercase tracking-widest group/btn px-3 md:px-5 py-2 md:py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-md hover:bg-white/10 hover:border-white/40 transition-all mt-3 md:mt-6"
+              className="inline-flex items-center gap-1.5 md:gap-2 text-white font-bold text-[11px] md:text-xs uppercase tracking-widest group/btn px-3 md:px-5 py-2 md:py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-md hover:bg-white/10 hover:border-white/40 transition-all mt-3 md:mt-3"
             >
               Explorar Tecnologia
               <ArrowUpRight
                 size={12}
                 className="group-hover/btn:translate-x-1 transition-transform"
               />
-            </motion.button>
+            </motion.a>
           </div>
         </motion.article>
       ))}
